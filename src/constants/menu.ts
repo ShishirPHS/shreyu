@@ -35,6 +35,14 @@ const MENU_ITEMS: MenuItemTypes[] = [
       },
     ],
   },
+  { key: "myTask", label: "My Task", isTitle: true },
+  {
+    key: "myTaskProfile",
+    label: "Profile",
+    isTitle: false,
+    icon: "package",
+    url: "/components/myTaskProfile",
+  },
   { key: "apps", label: "Apps", isTitle: true },
   {
     key: "apps-calendar",

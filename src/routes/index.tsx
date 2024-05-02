@@ -61,6 +61,12 @@ const UIElements = React.lazy(() => import("../pages/uikit"));
 // widgets
 const Widgets = React.lazy(() => import("../pages/widgets/"));
 
+// my task components
+//myTaskProfile
+const MyTaskProfile = React.lazy(
+  () => import("../components/task/Profile/MyTaskProfile")
+);
+
 // icons
 const Unicons = React.lazy(() => import("../pages/icons/Unicons"));
 const FeatherIcons = React.lazy(() => import("../pages/icons/Feather/"));
@@ -287,6 +293,12 @@ const uiRoutes: RoutesProps = {
       name: "UIElements",
       element: <UIElements />,
       route: PrivateRoute,
+    },
+    // my task routes
+    {
+      path: "/components/myTaskProfile",
+      name: "UIElements",
+      element: <MyTaskProfile></MyTaskProfile>,
     },
     {
       path: "/components/widgets",
