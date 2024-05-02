@@ -77,7 +77,7 @@ const sizePerPageList = [
   },
 ];
 
-const Invoices = () => {
+const Reports = () => {
   return (
     <div className="mt-3">
       <Row>
@@ -103,4 +103,4 @@ const Invoices = () => {
   );
 };
 
-export default Invoices;
+export default Reports;
