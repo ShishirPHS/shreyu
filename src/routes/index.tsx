@@ -77,6 +77,11 @@ const MyTaskReports = React.lazy(
   () => import("../components/task/Reports/Reports")
 );
 
+// myTaskReports
+const MyTaskBranches = React.lazy(
+  () => import("../components/task/Branches/Branches")
+);
+
 // icons
 const Unicons = React.lazy(() => import("../pages/icons/Unicons"));
 const FeatherIcons = React.lazy(() => import("../pages/icons/Feather/"));
@@ -319,6 +324,11 @@ const uiRoutes: RoutesProps = {
       path: "/components/myTaskReports",
       name: "UIElements",
       element: <MyTaskReports></MyTaskReports>,
+    },
+    {
+      path: "/components/myTaskBranches",
+      name: "UIElements",
+      element: <MyTaskBranches></MyTaskBranches>,
     },
     {
       path: "/components/widgets",

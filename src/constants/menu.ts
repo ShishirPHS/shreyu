@@ -57,6 +57,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
     icon: "flag",
     url: "/components/myTaskReports",
   },
+  {
+    key: "myTaskBranches",
+    label: "Branches",
+    isTitle: false,
+    icon: "map-pin",
+    url: "/components/myTaskBranches",
+  },
   { key: "apps", label: "Apps", isTitle: true },
   {
     key: "apps-calendar",
