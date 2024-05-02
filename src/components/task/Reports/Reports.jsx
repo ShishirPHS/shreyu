@@ -25,31 +25,32 @@ const columns = [
     sort: true,
   },
   {
-    Header: "Subtotal",
+    Header: "gender",
+    sort: false,
+  },
+  {
+    Header: "Age",
+    sort: false,
+  },
+  {
+    Header: "Phone",
+    accessor: "phone",
     sort: true,
   },
   {
-    Header: "Discount",
-    sort: true,
-  },
-  {
-    Header: "Total",
-    sort: true,
-  },
-  {
-    Header: "Paid",
-    sort: true,
-  },
-  {
-    Header: "Due",
-    sort: true,
+    Header: "Tests",
+    sort: false,
   },
   {
     Header: "Date",
     sort: true,
   },
   {
-    Header: "Status",
+    Header: "Done",
+    sort: true,
+  },
+  {
+    Header: "Signed",
     sort: true,
   },
   {
@@ -84,7 +85,7 @@ const Reports = () => {
         <Col>
           <Card>
             <Card.Body>
-              <h4 className="header-title mb-3">Invoices Table</h4>
+              <h4 className="header-title mb-3">Reports Table</h4>
 
               <Table
                 columns={columns}
