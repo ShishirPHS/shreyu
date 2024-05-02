@@ -43,6 +43,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
     icon: "package",
     url: "/components/myTaskProfile",
   },
+  {
+    key: "myTaskInvoices",
+    label: "Invoices",
+    isTitle: false,
+    icon: "package",
+    url: "/components/myTaskInvoices",
+  },
   { key: "apps", label: "Apps", isTitle: true },
   {
     key: "apps-calendar",

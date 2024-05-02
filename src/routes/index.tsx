@@ -66,6 +66,10 @@ const Widgets = React.lazy(() => import("../pages/widgets/"));
 const MyTaskProfile = React.lazy(
   () => import("../components/task/Profile/MyTaskProfile")
 );
+// myTaskInvoices
+const MyTaskInvoices = React.lazy(
+  () => import("../components/task/Invoices/Invoices")
+);
 
 // icons
 const Unicons = React.lazy(() => import("../pages/icons/Unicons"));
@@ -299,6 +303,11 @@ const uiRoutes: RoutesProps = {
       path: "/components/myTaskProfile",
       name: "UIElements",
       element: <MyTaskProfile></MyTaskProfile>,
+    },
+    {
+      path: "/components/myTaskInvoices",
+      name: "UIElements",
+      element: <MyTaskInvoices></MyTaskInvoices>,
     },
     {
       path: "/components/widgets",
