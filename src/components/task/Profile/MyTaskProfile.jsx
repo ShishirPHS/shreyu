@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
+import signatureImg from "./pngegg.png";
 
 const Profile = () => {
   const [validated, setValidated] = useState(false);
@@ -116,7 +117,19 @@ const Profile = () => {
                     </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Form.Group as={Row} className="mb-3">
+                  <Form.Label column lg={2} htmlFor="signature">
+                    Signature
+                  </Form.Label>
+                  <Col lg={10}>
+                    <img
+                      style={{ width: "200px" }}
+                      src={signatureImg}
+                      alt="User's Signature"
+                    />
+                  </Col>
+                </Form.Group>
+                <Button className="mt-2" variant="primary" type="submit">
                   Save
                 </Button>
               </Col>
