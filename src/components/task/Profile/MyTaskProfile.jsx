@@ -1,25 +1,55 @@
+import { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 
 const Profile = () => {
+  const [validated, setValidated] = useState(false);
+
+  /*
+   * handle form submission
+   */
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
   return (
     <div className="mt-3">
       <Card>
         <Card.Body>
           <h4 className="header-title mt-0 mb-3">Edit Profile</h4>
 
-          <Form className="form-horizontal">
+          <Form
+            className="form-horizontal"
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+          >
             <Row>
               <Col md={12}>
-                <Form.Group as={Row} className="mb-3">
+                <Form.Group
+                  as={Row}
+                  className="mb-3"
+                  controlId="validationCustom01"
+                >
                   <Form.Label column lg={2} htmlFor="simpleinput">
                     User Name
                   </Form.Label>
                   <Col lg={10}>
                     <Form.Control
+                      required
                       type="text"
                       id="simpleinput"
                       defaultValue="Lab Admin"
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Please Enter User Name.
+                    </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3">
@@ -28,11 +58,16 @@ const Profile = () => {
                   </Form.Label>
                   <Col lg={10}>
                     <Form.Control
+                      required
                       type="email"
                       id="example-email"
                       name="example-email"
                       defaultValue="super_admin@lab.com"
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Please Enter Email.
+                    </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3">
@@ -41,10 +76,15 @@ const Profile = () => {
                   </Form.Label>
                   <Col lg={10}>
                     <Form.Control
+                      required
                       type="password"
                       id="example-password"
                       placeholder="Password"
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Please Enter Password.
+                    </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3">
@@ -53,10 +93,15 @@ const Profile = () => {
                   </Form.Label>
                   <Col lg={10}>
                     <Form.Control
+                      required
                       type="password"
                       id="example-password"
                       placeholder="Confirm Password"
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Please Confirm Password.
+                    </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3">
@@ -64,7 +109,11 @@ const Profile = () => {
                     Choose Your Signature
                   </Form.Label>
                   <Col lg={10}>
-                    <Form.Control type="file" id="example-fileinput" />
+                    <Form.Control required type="file" id="example-fileinput" />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Please Choose Your Signature.
+                    </Form.Control.Feedback>
                   </Col>
                 </Form.Group>
                 <Button variant="primary" type="submit">
