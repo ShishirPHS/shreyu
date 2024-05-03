@@ -89,8 +89,15 @@ const MENU_ITEMS: MenuItemTypes[] = [
     key: "myTaskAntibiotics",
     label: "Antibiotics",
     isTitle: false,
-    icon: "thermometer",
+    icon: "plus-square",
     url: "/components/myTaskAntibiotics",
+  },
+  {
+    key: "myTaskDoctors",
+    label: "Doctors",
+    isTitle: false,
+    icon: "briefcase",
+    url: "/components/myTaskDoctors",
   },
   { key: "apps", label: "Apps", isTitle: true },
   {
