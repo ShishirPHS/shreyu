@@ -95,6 +95,11 @@ const MyTaskCultureOptions = React.lazy(
   () => import("../components/task/CultureOptions/CultureOptions")
 );
 
+// myTaskCultureOptions
+const MyTaskAntibiotics = React.lazy(
+  () => import("../components/task/Antibiotics/Antibiotics")
+);
+
 // icons
 const Unicons = React.lazy(() => import("../pages/icons/Unicons"));
 const FeatherIcons = React.lazy(() => import("../pages/icons/Feather/"));
@@ -357,6 +362,11 @@ const uiRoutes: RoutesProps = {
       path: "/components/myTaskCultureOptions",
       name: "UIElements",
       element: <MyTaskCultureOptions></MyTaskCultureOptions>,
+    },
+    {
+      path: "/components/myTaskAntibiotics",
+      name: "UIElements",
+      element: <MyTaskAntibiotics></MyTaskAntibiotics>,
     },
     {
       path: "/components/widgets",

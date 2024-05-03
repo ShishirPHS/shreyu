@@ -85,6 +85,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
     icon: "thermometer",
     url: "/components/myTaskCultureOptions",
   },
+  {
+    key: "myTaskAntibiotics",
+    label: "Antibiotics",
+    isTitle: false,
+    icon: "thermometer",
+    url: "/components/myTaskAntibiotics",
+  },
   { key: "apps", label: "Apps", isTitle: true },
   {
     key: "apps-calendar",
