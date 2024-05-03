@@ -64,6 +64,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
     icon: "map-pin",
     url: "/components/myTaskBranches",
   },
+  {
+    key: "myTaskTests",
+    label: "Tests",
+    isTitle: false,
+    icon: "thermometer",
+    url: "/components/myTaskTests",
+  },
   { key: "apps", label: "Apps", isTitle: true },
   {
     key: "apps-calendar",
