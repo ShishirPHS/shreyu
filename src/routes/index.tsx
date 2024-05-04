@@ -110,6 +110,11 @@ const MyTaskTestCreate = React.lazy(
   () => import("../components/task/Tests/TestCreate/TestCreate")
 );
 
+// myTaskCultureOptions
+const MyTaskInvoiceCreate = React.lazy(
+  () => import("../components/task/Invoices/InvoiceCreate/InvoiceCreate")
+);
+
 // icons
 const Unicons = React.lazy(() => import("../pages/icons/Unicons"));
 const FeatherIcons = React.lazy(() => import("../pages/icons/Feather/"));
@@ -387,6 +392,11 @@ const uiRoutes: RoutesProps = {
       path: "/components/myTaskTestCreate",
       name: "UIElements",
       element: <MyTaskTestCreate></MyTaskTestCreate>,
+    },
+    {
+      path: "/components/myTaskInvoiceCreate",
+      name: "UIElements",
+      element: <MyTaskInvoiceCreate></MyTaskInvoiceCreate>,
     },
     {
       path: "/components/widgets",

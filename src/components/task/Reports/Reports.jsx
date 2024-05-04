@@ -4,6 +4,7 @@ import Table from "../../../components/Table";
 
 //dummy data
 import { records as data } from "../../../pages/tables/data";
+import PageTitle from "../../PageTitle";
 
 const columns = [
   {
@@ -80,27 +81,39 @@ const sizePerPageList = [
 
 const Reports = () => {
   return (
-    <div className="mt-3">
-      <Row>
-        <Col>
-          <Card>
-            <Card.Body>
-              <h4 className="header-title mb-3">Reports Table</h4>
+    <>
+      <PageTitle
+        breadCrumbItems={[
+          {
+            label: "Reports",
+            path: "/components/myTaskReports",
+            active: true,
+          },
+        ]}
+        title={" Reports"}
+      />
+      <div>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <h4 className="header-title mb-3">Reports Table</h4>
 
-              <Table
-                columns={columns}
-                data={data}
-                pageSize={5}
-                sizePerPageList={sizePerPageList}
-                isSortable={true}
-                pagination={true}
-                isSearchable={true}
-              />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </div>
+                <Table
+                  columns={columns}
+                  data={data}
+                  pageSize={5}
+                  sizePerPageList={sizePerPageList}
+                  isSortable={true}
+                  pagination={true}
+                  isSearchable={true}
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </>
   );
 };
 

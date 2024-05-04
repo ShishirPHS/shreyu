@@ -31,7 +31,7 @@ const Profile = () => {
         ]}
         title={" Profile"}
       />
-      <div className="">
+      <div>
         <Card>
           <Card.Body>
             <h4 className="header-title mt-0 mb-3">Edit Profile</h4>
